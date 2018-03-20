@@ -28,7 +28,7 @@ class App extends Component {
     MESSAGE.substring(0, this.state.totalVisibilityChar -1)
   )
 
-  shoundBlink = () => (
+  shouldBlink = () => (
     this.state.totalVisibilityChar - 1 > MESSAGE.length
   )
 
@@ -37,7 +37,7 @@ class App extends Component {
       <div className="app-container">
        <h1 className="welcome-text">
         {this.renderMessage()}
-        <span className={`keyboard-cursor ${this.shoundBlink() ? 'blink' : ''}`}>|</span>
+        <span className={`keyboard-cursor ${this.shouldBlink() ? 'blink' : ''}`}>|</span>
        </h1>
       </div>
     );
