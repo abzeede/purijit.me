@@ -1,0 +1,19 @@
+.app-container {
+  display: flex;
+  color: #333;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-text {
+  white-space: pre;
+}
+
+@media only screen and (max-width: 600px) {
+  .welcome-text {
+    font-size: 20px;
+  }
+} 
