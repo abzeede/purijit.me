@@ -12,18 +12,8 @@
   white-space: pre;
 }
 
-.blink {
-  animation: blinking 0.8s infinite;
-  animation-delay: 0.35s;
-}
-
 @media only screen and (max-width: 600px) {
   .welcome-text {
     font-size: 20px;
   }
-}
-
-@keyframes blinking {
-  from {opacity: 0;}
-  to {opacity: 1;}
 }

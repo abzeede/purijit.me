@@ -1,44 +1,18 @@
 import React, { Component } from 'react';
+import Typing from './components/Typing'
 import './App.css';
 
 const MESSAGE = `Purijit.me is under construction\n\nComing Soon...`
 const CPMS = 125 // Character per minute
-const DELAY = 3500 / CPMS // delay in millisecond
-let timeout
+const DELAY = 3500  // delay in millisecond
 
 class App extends Component {
-  state = {
-    totalVisibilityChar: 1,
-  }
-
-  componentDidMount() {
-    timeout = setInterval(()=> {
-      this.setState((state) => ({
-        totalVisibilityChar: state.totalVisibilityChar <= (MESSAGE.length + DELAY) ? 
-          state.totalVisibilityChar + 1 : 1
-      }))
-    }, CPMS)
-  }
-
-  componentWillUnmount() {
-    clearInterval(timeout)
-  }
-
-  renderMessage = () => (
-    MESSAGE.substring(0, this.state.totalVisibilityChar -1)
-  )
-
-  shouldBlink = () => (
-    this.state.totalVisibilityChar - 1 > MESSAGE.length
-  )
-
   render() {
     return (
       <div className="app-container">
-       <h1 className="welcome-text">
-        {this.renderMessage()}
-        <span className={`keyboard-cursor ${this.shouldBlink() ? 'blink' : ''}`}>|</span>
-       </h1>
+        <h1 className="welcome-text">
+          <Typing message={MESSAGE} delay={DELAY} cpms={CPMS} />
+        </h1>
       </div>
     );
   }
