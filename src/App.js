@@ -3,7 +3,7 @@ import './App.css';
 
 const MESSAGE = `Purijit.me is under construction\n\nComing Soon...`
 const CPMS = 125 // Character per minute
-const DELAY = 2500 / CPMS // delay in millisecond
+const DELAY = 3500 / CPMS // delay in millisecond
 let timeout
 
 class App extends Component {
