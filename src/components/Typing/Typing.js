@@ -11,7 +11,7 @@ class Typing extends React.Component {
   }
   defaultProps = {
     message: '',
-    /** Delay in millisection */
+    /** Delay in millisecond */
     deplay: 0,
     /** Character per millisecond */
     cpms: 125,
